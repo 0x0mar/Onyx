@@ -13,6 +13,7 @@ TARGET          = keylogger
 # source-files with the ending substituted with ".o"
 # If your program uses the files main.c and hwk1a.c, then this line would be
 OFILES          = src/main.o \
+				  src/runTests.o \
 				  src/shutdown.o \
 				  src/FileWriter/FileWriter.o \
 				  src/FileWriter/fileWriterDestructor.o \

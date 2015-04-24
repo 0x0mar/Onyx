@@ -6,9 +6,9 @@
  * Precondition: fileName is not null
  * Postcondition: The file writer is setup
  *
- * @param string fileName The name of the file to open for writing
+ * @param const char* fileName The name of the file to open for writing
  */
-FileWriter::FileWriter(char* fileName)
+FileWriter::FileWriter(const char* fileName)
 {
     this->outputFile.open(fileName);
 

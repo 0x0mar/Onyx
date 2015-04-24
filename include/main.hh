@@ -6,12 +6,14 @@
 #include <iostream>
 #include <signal.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 using namespace std;
 
 extern s_gl_env gl_env;
 
-void usage();
+void runTests();
 void shutdown(int sig);
+void usage();
 
 #endif

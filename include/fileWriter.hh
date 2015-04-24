@@ -10,7 +10,7 @@ using namespace std;
 class FileWriter
 {
     public:
-        FileWriter(char* fileName);
+        FileWriter(const char* fileName);
         ~FileWriter();
         void writeToFile(char data);
 

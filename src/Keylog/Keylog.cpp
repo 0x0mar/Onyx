@@ -6,9 +6,9 @@
  * Precondition: file is not null
  * Postcondition: The filewriter is instantiated
  *
- * @param char* file The output file name
+ * @param const char* file The output file name
  */
-Keylog::Keylog(char* file)
+Keylog::Keylog(const char* file)
 {
     if(file != NULL)
     {

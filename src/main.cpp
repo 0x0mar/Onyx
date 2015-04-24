@@ -15,9 +15,10 @@ s_gl_env gl_env;
 int main(int argc, char** argv)
 {
     int i;
-    char* outputFile;
+    const char* outputFile;
 
     signal(SIGINT, shutdown);
+    outputFile = NULL;
 
     if(argc < 2)
     {
@@ -32,6 +33,11 @@ int main(int argc, char** argv)
         if(strcmp(argv[i], "-h") == 0)
         {
             usage();
+            return 0;
+        }
+        else if(strcmp(argv[i], "-t") == 0)
+        {
+            runTests();
             return 0;
         }
         else if(strcmp(argv[i], "-v") == 0)
@@ -65,9 +71,10 @@ void usage()
 {
     cout << endl;
     cout << "Usage: " << endl;
-    cout << "./keylogger [-vhgf]" << endl;
+    cout << "./keylogger [-vthgf]" << endl;
     cout << "-v Verbose output" << endl;
+    cout << "-t Run unit tests" << endl;
     cout << "-g GUI mode" << endl;
-    cout << "-f fileName Specify an output file" << endl;
+    cout << "-f [fileName] Specify an output file" << endl;
     cout << "-h Display this message" << endl;
 }
